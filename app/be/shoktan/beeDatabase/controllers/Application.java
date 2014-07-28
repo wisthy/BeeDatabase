@@ -1,4 +1,4 @@
-package controllers;
+package be.shoktan.beeDatabase.controllers;
 
 import play.*;
 import play.mvc.*;
