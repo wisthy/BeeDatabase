@@ -13,6 +13,8 @@ import play.db.ebean.Model;
  */
 @Entity
 public class Modpack extends Model {
+	private static final long serialVersionUID = 377548008816086879L;
+
 	@Id
 	private Long id;
 	
