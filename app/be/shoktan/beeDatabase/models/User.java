@@ -1,5 +1,6 @@
 package be.shoktan.beeDatabase.models;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
 
 import play.data.validation.Constraints.Required;
@@ -7,6 +8,7 @@ import play.db.ebean.Model;
 
 import com.avaje.ebean.annotation.Encrypted;
 
+@Entity
 public class User extends Model{
 	private static final long serialVersionUID = -5000399410103490477L;
 
@@ -17,7 +19,6 @@ public class User extends Model{
 	private String login;
 	
 	@Required
-	@Encrypted
 	private String password;
 
 	/**

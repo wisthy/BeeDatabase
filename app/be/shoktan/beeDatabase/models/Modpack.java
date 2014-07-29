@@ -1,5 +1,6 @@
 package be.shoktan.beeDatabase.models;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
 
 import play.data.validation.Constraints.Required;
@@ -10,6 +11,7 @@ import play.db.ebean.Model;
  * @author D-RH27ZD
  *
  */
+@Entity
 public class Modpack extends Model {
 	@Id
 	private Long id;

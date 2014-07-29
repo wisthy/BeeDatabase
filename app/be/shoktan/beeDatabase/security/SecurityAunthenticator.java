@@ -1,10 +1,10 @@
 package be.shoktan.beeDatabase.security;
 
 
+import be.shoktan.beeDatabase.controllers.routes;
 import play.mvc.Http.Context;
 import play.mvc.Result;
 import play.mvc.Security;
-import controllers.routes;
 
 public class SecurityAunthenticator extends Security.Authenticator {
 	/*
@@ -23,6 +23,7 @@ public class SecurityAunthenticator extends Security.Authenticator {
     @Override
     public Result onUnauthorized(Context ctx) {
     	return redirect(routes.Application.index());
+    	//return forbidden("42");
     }
     
 //    public boolean hasACL(ACL acl){
