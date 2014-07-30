@@ -107,7 +107,7 @@ public class Group extends AbstractModel{
 				}
 				break;
 			default:
-				//shouldn't happen, throw an error
+				// TODO: 2014/07/30 Wisthy - shouldn't happen, throw an error
 			}
 		}
 		
@@ -119,10 +119,10 @@ public class Group extends AbstractModel{
 			return null;
 		}
 		
-		return findFromSpecification(specification.getId()); //replace by correct call to find
+		return findFromSpecification(specification.getId()); // TODO: 2014/07/30 Wisthy - replace by correct call to find
 	}
 	
 	public static Group findFromSpecification(long specification){		
-		return null; //replace by correct call to find
+		return null; // TODO: 2014/07/30 Wisthy - replace by correct call to find
 	}
 }
