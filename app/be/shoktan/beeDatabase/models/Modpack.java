@@ -1,22 +1,17 @@
 package be.shoktan.beeDatabase.models;
 
 import javax.persistence.Entity;
-import javax.persistence.Id;
 
 import play.data.validation.Constraints.Required;
-import play.db.ebean.Model;
 
 /**
  * the goal of this class is to represent the version of the modpack for which the data are inserted
- * @author D-RH27ZD
+ * @author Wisthy
  *
  */
 @Entity
-public class Modpack extends Model {
+public class Modpack extends AbstractModel {
 	private static final long serialVersionUID = 377548008816086879L;
-
-	@Id
-	private Long id;
 	
 	@Required
 	private String name;
@@ -31,20 +26,6 @@ public class Modpack extends Model {
 		super();
 		this.name = name;
 		this.version = version;
-	}
-
-	/**
-	 * @return the id
-	 */
-	public Long getId() {
-		return id;
-	}
-
-	/**
-	 * @param id the id to set
-	 */
-	public void setId(Long id) {
-		this.id = id;
 	}
 
 	/**
