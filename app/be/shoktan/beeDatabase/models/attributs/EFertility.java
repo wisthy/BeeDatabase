@@ -1,8 +1,8 @@
 package be.shoktan.beeDatabase.models.attributs;
 
 /**
- * @author Wisthy
  * Enumeration to represent the fertility rate of a bee
+ * @author Wisthy
  */
 public enum EFertility {
 	
