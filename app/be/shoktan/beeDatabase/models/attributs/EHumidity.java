@@ -1,7 +1,7 @@
 package be.shoktan.beeDatabase.models.attributs;
 
 /**
- * enumeration of humidy values for bees environment
+ * Enumeration of humidy values for bees environment
  * @author Wisthy
  *
  */
