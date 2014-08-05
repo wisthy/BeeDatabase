@@ -1,7 +1,7 @@
 package be.shoktan.beeDatabase.models.attributs;
 
 /**
- * enumeration of the temperature for bees
+ * Enumeration of the temperature values for bee's environments
  * @author Wisthy
  *
  */
