@@ -1,11 +1,9 @@
 package be.shoktan.beeDatabase.models.attributs;
 
 /**
- * 
+ * Enumeration to represent the range of tolerance 
+ * of a bee to environment value for temperature or humidity
  * @author Wisthy
- * The goal of this enumeration is to represent the range of tolerance 
- * of a bee to temperature or humidity
- *
  */
 public enum ETolerance {
 	none(EToleranceType.both, 0),
