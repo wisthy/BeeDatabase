@@ -1,20 +1,26 @@
 package be.shoktan.beeDatabase.models;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Entity;
 
+import be.shoktan.beeDatabase.models.attributs.IAttribute;
+import be.shoktan.beeDatabase.models.attributs.EAttribute;
 import be.shoktan.beeDatabase.models.attributs.EFertility;
 import be.shoktan.beeDatabase.models.attributs.EHumidity;
 import be.shoktan.beeDatabase.models.attributs.ETemperature;
 import be.shoktan.beeDatabase.models.attributs.ETolerance;
+import be.shoktan.beeDatabase.utils.EqualsUtils;
 import play.data.validation.Constraints.Required;
 
 /**
- * model representif a specie of a bee
+ * Model class representing a specie of a bee
  * @author Wisthy
  *
  */
 @Entity
-public class Specie extends AbstractModel {
+public class Specie extends AbstractModel implements IAttributesHolder {
 	@Required
 	private String name;
 	
@@ -214,4 +220,38 @@ public class Specie extends AbstractModel {
 
 
 	public static Finder<Long, Specie> find = new Finder<Long, Specie>(Long.class, Specie.class);
+
+	/*
+	 * (non-Javadoc)
+	 * @see be.shoktan.beeDatabase.models.AttributsHolder#getAttributs()
+	 */
+	@Override
+	public List<Couple<EAttribute, IAttribute>> getAttributes() {
+		ArrayList<Couple<EAttribute, IAttribute>> result = new ArrayList<>();
+		result.add(new Couple<EAttribute, IAttribute>(EAttribute.fertility, fertility));
+		
+		result.add(new Couple<EAttribute, IAttribute>(EAttribute.humidity, humidity));
+		result.add(new Couple<EAttribute, IAttribute>(EAttribute.humidityTolerance, humidityTolerance));
+		
+		result.add(new Couple<EAttribute, IAttribute>(EAttribute.temperature, temperature));
+		result.add(new Couple<EAttribute, IAttribute>(EAttribute.temperatureTolerance, temperatureTolerance));
+		
+		return result;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * @see be.shoktan.beeDatabase.models.IAttributesHolder#hasAttribute(be.shoktan.beeDatabase.models.attributs.EAttribute, be.shoktan.beeDatabase.models.attributs.IAttribute)
+	 */
+	@Override
+	public boolean hasAttribute(EAttribute type, IAttribute searched) {
+		for(Couple<EAttribute, IAttribute> iter : getAttributes()){
+			if(iter.getA() == type){
+				if(EqualsUtils.equalsNullSafe(iter.getB(), searched)){
+					return true;
+				}
+			}
+		}
+		return false;
+	}
 }
