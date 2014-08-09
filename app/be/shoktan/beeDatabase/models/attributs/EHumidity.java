@@ -5,7 +5,7 @@ package be.shoktan.beeDatabase.models.attributs;
  * @author Wisthy
  *
  */
-public enum EHumidity {
+public enum EHumidity implements IAttribute {
 	damp,
 	normal,
 	arid

@@ -6,7 +6,7 @@ package be.shoktan.beeDatabase.models.attributs;
  * @author Wisthy
  *
  */
-public enum EToleranceType {
+public enum EToleranceType implements IAttribute {
 	down,
 	up,
 	both;

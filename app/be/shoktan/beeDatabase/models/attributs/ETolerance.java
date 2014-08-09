@@ -5,7 +5,7 @@ package be.shoktan.beeDatabase.models.attributs;
  * of a bee to environment value for temperature or humidity
  * @author Wisthy
  */
-public enum ETolerance {
+public enum ETolerance implements IAttribute {
 	none(EToleranceType.both, 0),
 	down_1(EToleranceType.down, 1),
 	down_2(EToleranceType.down, 2),

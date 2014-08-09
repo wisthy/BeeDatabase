@@ -5,7 +5,7 @@ package be.shoktan.beeDatabase.models.attributs;
  * @author Wisthy
  *
  */
-public enum ETemperature {
+public enum ETemperature implements IAttribute{
 	icy,
 	cold,
 	normal,

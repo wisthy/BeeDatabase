@@ -5,7 +5,7 @@ package be.shoktan.beeDatabase.models.attributs;
  * @author Wisthy
  *
  */
-public enum EProductivity {
+public enum EProductivity implements IAttribute{
 	slowest,
 	slower,
 	slow,
