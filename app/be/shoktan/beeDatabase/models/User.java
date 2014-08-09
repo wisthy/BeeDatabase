@@ -4,10 +4,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 import play.data.validation.Constraints.Required;
-import play.db.ebean.Model;
 
 @Entity
-public class User extends Model{
+public class User {
 	private static final long serialVersionUID = -5000399410103490477L;
 
 	@Id
@@ -70,7 +69,4 @@ public class User extends Model{
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-	
-	public static Finder<Long, User> find = new Finder<Long, User>(Long.class, User.class);
 }

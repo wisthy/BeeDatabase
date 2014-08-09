@@ -1,9 +1,9 @@
 package be.shoktan.beeDatabase.models;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-
-import play.db.ebean.Model;
+import play.db.*;
 
 /**
  * Abstract model class for the common stuff of all the other models 
@@ -11,8 +11,10 @@ import play.db.ebean.Model;
  *
  */
 @Entity
-public class AbstractModel extends Model{
+public abstract class AbstractModel {
 	@Id
+	@GeneratedValue(generator="increment")
+	//@GenericGenerator(name="increment", strategy = "increment")
 	private long id;
 
 	/**
@@ -29,5 +31,8 @@ public class AbstractModel extends Model{
 		this.id = id;
 	}
 	
+	public static AbstractModel findById(Long id) {
+		  return JPA.em().find(AbstractModel.class, id);
+		}
 	
 }

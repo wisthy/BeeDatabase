@@ -84,7 +84,6 @@ public class Group extends AbstractModel{
 		}
 	}	
 	
-	public static Finder<Long, Group> find = new Finder<Long, Group>(Long.class, Group.class);
 	
 	public boolean isMemberOf(Specification member){
 		if(member == null || this.members == null) {

@@ -64,12 +64,6 @@ public class Specification extends AbstractModel implements Comparable<Specifica
 	public void setType(ESpecification type) {
 		this.type = type;
 	}
-
-
-
-
-
-	public static Finder<Long, Specification> find = new Finder<Long, Specification>(Long.class, Specification.class);
 	
 	public enum ESpecification{
 		SPECIE, GROUP;

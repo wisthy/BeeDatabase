@@ -56,5 +56,4 @@ public class Modpack extends AbstractModel {
 		this.version = version;
 	}	
 	
-	public static Finder<Long, Modpack> find = new Finder<Long, Modpack>(Long.class, Modpack.class);
 }

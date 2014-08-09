@@ -217,10 +217,6 @@ public class Specie extends AbstractModel implements IAttributesHolder {
 		this.group = group;
 	}
 
-
-
-	public static Finder<Long, Specie> find = new Finder<Long, Specie>(Long.class, Specie.class);
-
 	/*
 	 * (non-Javadoc)
 	 * @see be.shoktan.beeDatabase.models.AttributsHolder#getAttributs()
